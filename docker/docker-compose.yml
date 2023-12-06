@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:4.4
+    container_name: mongodb_container
+    restart: always
+    ports:
+      - 27218:27017
+    networks:
+      - backend
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: jahir
+      MONGO_INITDB_ROOT_PASSWORD: Jahir_3323
+
+    volumes:
+      - ./mongodb_data:/data/db
+
+networks:
+  backend:
+    external:
+      name: proxy
+
+
