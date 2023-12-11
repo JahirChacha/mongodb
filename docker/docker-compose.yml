@@ -8,27 +8,26 @@ services:
       - 80:80
       - 443:443
       - 1433:1433
+      - 2017:27017
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - /etc/nginx/proxy.conf:/etc/nginx/conf.d/my_proxy.conf:ro
-      - /home/jahir/bd/proxy/Jahir:/etc/nginx/certs
+      - ./:/etc/nginx/certs
   mongodb:
     image: mongo:4.4
     container_name: mongodb_container
     restart: always
     ports:
-      - 27017:27017
+      - 27210:27017
     networks:
       - backend
     environment:
       MONGO_INITDB_ROOT_USERNAME: jahir
-      MONGO_INITDB_ROOT_PASSWORD: Jahir_3323
+      MONGO_INITDB_ROOT_PASSWORD: jahir3323
     volumes:
       - ./mongodb_data:/data/db
 
 networks:
   backend:
-  default:
     external:
       name: proxy
-
