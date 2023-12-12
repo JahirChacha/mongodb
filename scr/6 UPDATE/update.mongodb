@@ -1,0 +1,15 @@
+use("espoch");
+
+var documentoExistente = db.productos.findOne({ _id: "6577ab30085cb5491b2400f2"});
+
+if (documentoExistente) {
+    // Elimina el documento existente
+    db.productos.deleteOne({ _id: "6577ab30085cb5491b2400f2" });
+
+    // Inserta el documento con nuevo _id
+    documentoExistente._id =1;
+    db.productos.insertOne(documentoExistente);
+}
+
+// Muestra los documentos actualizados
+db.productos.find();

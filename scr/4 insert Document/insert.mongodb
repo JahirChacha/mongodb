@@ -1,0 +1,16 @@
+use("espoch")
+
+db.getCollection('productos').insertOne({
+    name: "product 3",
+    price: 1300
+});
+
+
+use("espoch")
+db.getCollection('productos').insertOne({
+    "_id": 2,
+    name: "product 4",
+    price: 1300
+});
+
+
