@@ -1,2 +1,2 @@
-use("espoch")
-db.productos.find()
+use("sample_training")
+db.zips.find()

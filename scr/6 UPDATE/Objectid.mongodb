@@ -1,5 +1,5 @@
-use("espoch")
-db.productos.updateOne(
+use("sample_training")
+db.zips.updateOne(
     {_id:ObjectId('1')},
 
     {

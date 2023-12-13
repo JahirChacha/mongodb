@@ -1,15 +1,15 @@
-use("espoch")
+use("sample_training")
 
-db.getCollection('productos').insertOne({
-    name: "product 3",
+db.getCollection('zips').insertOne({
+    name: "product 1",
     price: 1300
 });
 
 
-use("espoch")
-db.getCollection('productos').insertOne({
+use("sample_training")
+db.getCollection('zips').insertOne({
     "_id": 2,
-    name: "product 4",
+    name: "product 2",
     price: 1300
 });
 

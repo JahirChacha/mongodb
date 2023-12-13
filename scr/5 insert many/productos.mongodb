@@ -1,6 +1,6 @@
-use("jahir_14")
-db.productos.drop()
-db.productos.insertMany([
+use("sample_training")
+db.zips.drop()
+db.zips.insertMany([
     {
     
     name: "product 1",
@@ -23,5 +23,5 @@ db.productos.insertMany([
         price: 1600
     }
 ]);
-db.productos.find()
+db.zips.find()
 
