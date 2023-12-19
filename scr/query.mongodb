@@ -1,2 +1,2 @@
-use("jahir_14")
-db.productos.find()
+use("sample_training")
+db.productos.find({city:"CLANTON"})

@@ -1,9 +1,10 @@
 use("sample_training")
 db.zips.updateMany(
-    {city:"CLEVELAND"},
+    {city:"CLANTON"},
     {
         $set: {
-        myattr:"Hola"
+        direccion_1:"NEW_YORK",
+        direccion_2:"MIAMI"
         }
     }
 )
