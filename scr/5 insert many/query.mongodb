@@ -1,2 +1,2 @@
-use("sample_training")
-db.zips.find({ city:"CLEVELAND"}).count()
+use("espoch_store")
+db.productos.find({ city:"CLEVELAND"}).count()

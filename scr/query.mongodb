@@ -1,2 +1,2 @@
-use("sample_training")
+use("espoch_store")
 db.productos.find({city:"CLANTON"})

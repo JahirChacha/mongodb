@@ -1,6 +1,6 @@
-use("sample_training")
-db.zips.drop()
-db.zips.insertMany([
+use("espoch_store")
+db.productos.drop()
+db.productos.insertMany([
     {
     "_id": 1,
     name: "product 5",
@@ -18,4 +18,4 @@ db.zips.insertMany([
         price: 1300
     }
 ]);
-db.zips.find()
+db.productos.find()
